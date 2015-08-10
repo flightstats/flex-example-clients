@@ -15,5 +15,5 @@ Requirements:
 By default gradle builds and runs the FetchOnceBatch example. You can change the default behaviour by editing build.gradle and changing the value of mainClassName from FetchOneBatch to FollowFeed.
 
 * gradle installDist
-* build/install/flex-flight-status-feed-client/bin/flex-flight-status-feed-client <APP_ID> <APP_KEY>
+* build/install/flex-flight-status-feed-client/bin/flex-flight-status-feed-client YOUR_APP_ID YOUR_APP_KEY
 
