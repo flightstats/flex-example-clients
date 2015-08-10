@@ -1,0 +1,13 @@
+*/build
+*/lib
+.DS_Store
+*.log
+*.iws
+out
+.idea
+.gradle
+*.iml
+*.ipr
+*.iws
+build
+*.pyc
