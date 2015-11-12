@@ -15,9 +15,10 @@ dependencies {
 }
 
 // Comment in the one you want to execute.
-//mainClassName = 'com.flightstats.flex.examples.BigBoxSimpleMain'
-mainClassName = 'com.flightstats.flex.examples.BigBoxPerfTestMain'
+mainClassName = 'com.flightstats.flex.examples.BigBoxSimpleMain'
+//mainClassName = 'com.flightstats.flex.examples.BigBoxPerfTestMain'
+//mainClassName = 'com.flightstats.flex.examples.BigBoxOnceEvery20sMain'
 
 run {
-    args 'your_app_id', 'your_app_key', '30', '90', '-30', '150'
+    args 'APP ID', 'APP KEY', '30', '90', '-30', '150', 20
 }
