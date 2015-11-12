@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group = 'com.flightstats.flex.examples'
+
+repositories {
+    mavenCentral();
+}
+
+dependencies {
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '2+'
+}
+
+// Comment in the one you want to execute.
+//mainClassName = 'com.flightstats.flex.examples.BigBoxSimpleMain'
+mainClassName = 'com.flightstats.flex.examples.BigBoxPerfTestMain'
+
+run {
+    args 'your_app_id', 'your_app_key', '30', '90', '-30', '150'
+}
