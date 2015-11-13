@@ -30,8 +30,8 @@ public class BigBoxSimpleMain {
         System.out.println(String.join("\n", smallBoxResponses));
     }
 
-    public List<String> execute(BigBoxRequest bigBoxBigBoxRequest, int threads) throws ExecutionException, InterruptedException {
+    public List<String> execute(BigBoxRequest bigBoxRequest, int threads) throws ExecutionException, InterruptedException {
         BigBoxFlightsNear bigBoxFlightsNear = new BigBoxFlightsNear(threads);
-        return bigBoxFlightsNear.fetchAll(bigBoxBigBoxRequest);
+        return bigBoxFlightsNear.fetchAll(bigBoxRequest);
     }
 }
