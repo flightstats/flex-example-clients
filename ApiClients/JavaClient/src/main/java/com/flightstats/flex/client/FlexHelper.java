@@ -15,6 +15,8 @@ public class FlexHelper {
     public static final String APP_ID = "appId";
     public static final String APP_KEY = "appKey";
     public static final String EXTENDED_OPTIONS = "extendedOptions";
+    public static final String INCLUDE_NEW_FIELDS = "includeNewFields";
+    public static final String INCLUDE_DELTAS = "includeDeltas";
     private static final Client httpClient = ClientBuilder.newClient().register(JacksonJsonProvider.class);
 
 
@@ -41,7 +43,7 @@ public class FlexHelper {
     }
 
     private static void appendQueryParams(Map<String, String> options, UriBuilder builder) {
-        options = options == null ? new HashMap<String,String>() : options;
+        options = options == null ? new HashMap<>() : options;
         if (options.containsKey(EXTENDED_OPTIONS)) {
             options.put(EXTENDED_OPTIONS, options.get(EXTENDED_OPTIONS) + ",useHttpErrors");
         } else {

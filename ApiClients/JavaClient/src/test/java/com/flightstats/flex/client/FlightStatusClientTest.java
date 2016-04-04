@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.Map;
 
 public class FlightStatusClientTest {
 
@@ -18,7 +19,9 @@ public class FlightStatusClientTest {
                 .build();
 
         // NOTE: You'll need to use the flight id of a current flight or this won't find a result.
-        FlightStatusByFlightResponse response = client.byFlightId("694026942", new HashMap<String, String>());
+        Map<String,String> params = new HashMap<>();
+        params.put(FlexHelper.EXTENDED_OPTIONS, FlexHelper.INCLUDE_NEW_FIELDS);
+        FlightStatusByFlightResponse response = client.byFlightId("694026942", params);
         System.out.println(response);
     }
 
@@ -30,7 +33,7 @@ public class FlightStatusClientTest {
                 .build();
 
         FlightStatusByFlightResponse response = client.byDepartingFlight(
-                "AA", "100", LocalDate.now(), new HashMap<String, String>());
+                "AA", "100", LocalDate.now(), new HashMap<>());
 
         System.out.println(response);
     }
@@ -43,7 +46,7 @@ public class FlightStatusClientTest {
                 .build();
 
         FlightStatusByFlightResponse response = client.byArrivingFlight(
-                "AA", "100", LocalDate.now(), new HashMap<String, String>());
+                "AA", "100", LocalDate.now(), new HashMap<>());
 
         System.out.println(response);
     }
