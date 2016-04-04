@@ -2,8 +2,7 @@ package com.flightstats.flex.client;
 
 
 import com.flightstats.flex.FlexCredentials;
-import com.flightstats.flex.domain.flighttrack.FlightTrackByFlightResponse;
-import org.junit.Test;
+import com.flightstats.flex.domain.flighttrack.FlightTrackResponse;
 
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -19,7 +18,7 @@ public class FlightTrackClientTest {
                 .build();
 
         // NOTE: You'll need to use the flight id of a current flight or this won't find a result.
-        FlightTrackByFlightResponse response = client.byFlightId("694026942", new HashMap<>());
+        FlightTrackResponse response = client.byFlightId("694026942", new HashMap<>());
         System.out.println(response);
     }
 
@@ -32,7 +31,7 @@ public class FlightTrackClientTest {
 
         Map<String,String> params = new HashMap<>();
         params.put(FlexHelper.EXTENDED_OPTIONS, FlexHelper.INCLUDE_NEW_FIELDS);
-        FlightTrackByFlightResponse response = client.byDepartingFlight(
+        FlightTrackResponse response = client.byDepartingFlight(
                 "AA", "100", LocalDate.now().minusDays(1), params);
 
         System.out.println(response);
@@ -45,7 +44,7 @@ public class FlightTrackClientTest {
                 .appKey(FlexCredentials.appKey)
                 .build();
 
-        FlightTrackByFlightResponse response = client.byArrivingFlight(
+        FlightTrackResponse response = client.byArrivingFlight(
                 "AA", "100", LocalDate.now().minusDays(1), new HashMap<>());
 
         System.out.println(response);

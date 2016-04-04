@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor(force = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class FlightStatusByFlightResponse {
+public class FlightStatusResponse {
     public FlightStatus flightStatus;
     public List<FlightStatus> flightStatuses;
     public Appendix appendix;

@@ -2,7 +2,7 @@ package com.flightstats.flex.client;
 
 
 import com.flightstats.flex.FlexCredentials;
-import com.flightstats.flex.domain.flightstatus.FlightStatusByFlightResponse;
+import com.flightstats.flex.domain.flightstatus.FlightStatusResponse;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -17,7 +17,7 @@ public class BasicTest {
                 .appKey(FlexCredentials.appKey)
                 .build();
 
-        FlightStatusByFlightResponse response = client.byDepartingFlight(
+        FlightStatusResponse response = client.byDepartingFlight(
                 "AA", "100", LocalDate.now(), new HashMap<String, String>());
 
         System.out.println(response);
