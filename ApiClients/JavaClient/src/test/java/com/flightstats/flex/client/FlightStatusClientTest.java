@@ -35,7 +35,7 @@ public class FlightStatusClientTest {
         System.out.println(response);
     }
 
-    @Test
+    // @Test
     public void testFlightStatusByArrivingFlight() {
         FlightStatusClient client = FlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
