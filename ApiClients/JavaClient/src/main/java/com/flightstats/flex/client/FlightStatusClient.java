@@ -17,7 +17,7 @@ public class FlightStatusClient {
     private String appId;
 
     public FlightStatusByFlightResponse byFlightId(String id, Map<String, String> options) {
-        UriBuilder builder = FlexHelper.createRequestUri("/flight/status/rest/v2/json/flight/status/" + id, options, appId, appKey);
+        UriBuilder builder = FlexHelper.createRequestUri("/flightstatus/rest/v2/json/flight/status/" + id, options, appId, appKey);
         return FlexHelper.executeHttpGet(builder.build(), FlightStatusByFlightResponse.class);
     }
 
