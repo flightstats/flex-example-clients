@@ -17,6 +17,8 @@ public class FlexHelper {
     public static final String EXTENDED_OPTIONS = "extendedOptions";
     public static final String INCLUDE_NEW_FIELDS = "includeNewFields";
     public static final String INCLUDE_DELTAS = "includeDeltas";
+    public static final String EXCLUDE_APPENDIX = "excludeAppendix";
+    public static final String LANGUAGE_CODE = "languageCode:%s";
     private static final Client httpClient = ClientBuilder.newClient().register(JacksonJsonProvider.class);
 
 

@@ -13,13 +13,15 @@ import java.util.Map;
 @Value
 @Builder
 @AllArgsConstructor
-public class FlightStatusClient {
+public class CurrentFlightStatusClient {
     private String appKey;
     private String appId;
 
     // By Flight
     public FlightStatusResponse byFlightId(String id, Map<String, String> options) {
-        UriBuilder builder = FlexHelper.createRequestUri("/flightstatus/rest/v2/json/flight/status/" + id, options, appId, appKey);
+        UriBuilder builder = FlexHelper.createRequestUri(
+                String.format("/flightstatus/rest/v2/json/flight/status/%s", id),
+                options, appId, appKey);
         return FlexHelper.executeHttpGet(builder.build(), FlightStatusResponse.class);
     }
 

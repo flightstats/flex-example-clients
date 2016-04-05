@@ -3,18 +3,17 @@ package com.flightstats.flex.client;
 
 import com.flightstats.flex.FlexCredentials;
 import com.flightstats.flex.domain.flightstatus.FlightStatusResponse;
-import org.junit.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FlightStatusClientTest {
+public class CurrentFlightStatusClientTest {
 
     // @Test
     public void testFlightStatusById() {
-        FlightStatusClient client = FlightStatusClient.builder()
+        CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
                 .appKey(FlexCredentials.appKey)
                 .build();
@@ -28,7 +27,7 @@ public class FlightStatusClientTest {
 
     //@Test
     public void testFlightStatusByDepartingFlight() {
-        FlightStatusClient client = FlightStatusClient.builder()
+        CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
                 .appKey(FlexCredentials.appKey)
                 .build();
@@ -40,7 +39,7 @@ public class FlightStatusClientTest {
 
     // @Test
     public void testFlightStatusByArrivingFlight() {
-        FlightStatusClient client = FlightStatusClient.builder()
+        CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
                 .appKey(FlexCredentials.appKey)
                 .build();
@@ -52,7 +51,7 @@ public class FlightStatusClientTest {
 
     // @Test
     public void testFlightStatusByDepartureAirport() {
-        FlightStatusClient client = FlightStatusClient.builder()
+        CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
                 .appKey(FlexCredentials.appKey)
                 .build();
@@ -64,7 +63,7 @@ public class FlightStatusClientTest {
 
     // @Test
     public void testFlightStatusByArrivalAirport() {
-        FlightStatusClient client = FlightStatusClient.builder()
+        CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
                 .appKey(FlexCredentials.appKey)
                 .build();
@@ -76,7 +75,7 @@ public class FlightStatusClientTest {
 
     // @Test
     public void testFlightStatusByRouteDeparture() {
-        FlightStatusClient client = FlightStatusClient.builder()
+        CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
                 .appKey(FlexCredentials.appKey)
                 .build();
@@ -88,7 +87,7 @@ public class FlightStatusClientTest {
 
     // @Test
     public void testFlightStatusByRouteArrival() {
-        FlightStatusClient client = FlightStatusClient.builder()
+        CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
                 .appKey(FlexCredentials.appKey)
                 .build();

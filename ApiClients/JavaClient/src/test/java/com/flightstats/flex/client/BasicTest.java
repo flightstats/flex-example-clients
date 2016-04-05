@@ -12,13 +12,12 @@ public class BasicTest {
 
     @Test
     public void testFlightStatusByDepartingFlight() {
-        FlightStatusClient client = FlightStatusClient.builder()
+        CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
                 .appKey(FlexCredentials.appKey)
                 .build();
 
-        FlightStatusResponse response = client.byDepartingFlight(
-                "AA", "100", LocalDate.now(), new HashMap<String, String>());
+        FlightStatusResponse response = client.byDepartingFlight("AA", "100", LocalDate.now(), new HashMap<>());
 
         System.out.println(response);
     }
