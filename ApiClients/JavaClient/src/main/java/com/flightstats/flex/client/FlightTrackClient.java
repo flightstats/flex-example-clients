@@ -7,6 +7,7 @@ import lombok.Value;
 
 import javax.ws.rs.core.UriBuilder;
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import java.util.Map;
 
 @Value
@@ -16,6 +17,7 @@ public class FlightTrackClient {
     private String appKey;
     private String appId;
 
+    // By Flight
     public FlightTrackResponse byFlightId(String id, Map<String, String> options) {
         UriBuilder builder = FlexHelper.createRequestUri("/flightstatus/rest/v2/json/flight/track/" + id, options, appId, appKey);
         return FlexHelper.executeHttpGet(builder.build(), FlightTrackResponse.class);
@@ -33,6 +35,21 @@ public class FlightTrackClient {
         UriBuilder builder = FlexHelper.createRequestUri(
                 String.format("/flightstatus/rest/v2/json/flight/tracks/%s/%s/arr/%s/%s/%s",
                         carrier, flight, date.getYear(), date.getMonthValue(), date.getDayOfMonth()),
+                options, appId, appKey);
+        return FlexHelper.executeHttpGet(builder.build(), FlightTrackResponse.class);
+    }
+
+    // By Airport
+    public FlightTrackResponse byDepartureAirport(String airport, Map<String, String> options) {
+        UriBuilder builder = FlexHelper.createRequestUri(
+                String.format("/flightstatus/rest/v2/json/airport/tracks/%s/dep", airport),
+                options, appId, appKey);
+        return FlexHelper.executeHttpGet(builder.build(), FlightTrackResponse.class);
+    }
+
+    public FlightTrackResponse byArrivalAirport(String airport, Map<String, String> options) {
+        UriBuilder builder = FlexHelper.createRequestUri(
+                String.format("/flightstatus/rest/v2/json/airport/tracks/%s/arr", airport),
                 options, appId, appKey);
         return FlexHelper.executeHttpGet(builder.build(), FlightTrackResponse.class);
     }

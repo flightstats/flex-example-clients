@@ -3,6 +3,7 @@ package com.flightstats.flex.client;
 
 import com.flightstats.flex.FlexCredentials;
 import com.flightstats.flex.domain.flighttrack.FlightTrackResponse;
+import org.junit.Test;
 
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -46,6 +47,32 @@ public class FlightTrackClientTest {
 
         FlightTrackResponse response = client.byArrivingFlight(
                 "AA", "100", LocalDate.now().minusDays(1), new HashMap<>());
+
+        System.out.println(response);
+    }
+
+    //@Test
+    public void testFlightTrackByDepartureAirport() {
+        FlightTrackClient client = FlightTrackClient.builder()
+                .appId(FlexCredentials.appId)
+                .appKey(FlexCredentials.appKey)
+                .build();
+
+        FlightTrackResponse response = client.byDepartureAirport(
+                "PDX", new HashMap<>());
+
+        System.out.println(response);
+    }
+
+    //@Test
+    public void testFlightTrackByArrivalAirport() {
+        FlightTrackClient client = FlightTrackClient.builder()
+                .appId(FlexCredentials.appId)
+                .appKey(FlexCredentials.appKey)
+                .build();
+
+        FlightTrackResponse response = client.byArrivalAirport(
+                "PDX", new HashMap<>());
 
         System.out.println(response);
     }
