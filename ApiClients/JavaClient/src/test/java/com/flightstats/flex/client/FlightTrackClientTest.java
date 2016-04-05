@@ -76,4 +76,28 @@ public class FlightTrackClientTest {
 
         System.out.println(response);
     }
+
+    // @Test
+    public void testFlightPositionsByBoundingBox() {
+        FlightTrackClient client = FlightTrackClient.builder()
+                .appId(FlexCredentials.appId)
+                .appKey(FlexCredentials.appKey)
+                .build();
+
+        FlightTrackResponse response = client.byBoundingBox(45, -125, 40, -120, new HashMap<>());
+
+        System.out.println(response);
+    }
+
+    // @Test
+    public void testFlightPositionsByRadius() {
+        FlightTrackClient client = FlightTrackClient.builder()
+                .appId(FlexCredentials.appId)
+                .appKey(FlexCredentials.appKey)
+                .build();
+
+        FlightTrackResponse response = client.byRadius(45, -122, 25, new HashMap<>());
+
+        System.out.println(response);
+    }
 }

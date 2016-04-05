@@ -20,5 +20,6 @@ import java.util.List;
 public class FlightTrackResponse {
     public FlightTrack flightTrack;
     public List<FlightTrack> flightTracks;
+    public List<FlightTrack> flightPositions;
     public Appendix appendix;
 }

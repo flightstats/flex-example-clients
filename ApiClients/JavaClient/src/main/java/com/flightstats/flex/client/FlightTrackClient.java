@@ -53,4 +53,19 @@ public class FlightTrackClient {
                 options, appId, appKey);
         return FlexHelper.executeHttpGet(builder.build(), FlightTrackResponse.class);
     }
+
+    // Flights Near
+    public FlightTrackResponse byBoundingBox(double topLat, double leftLon, double bottomLat, double rightLon, Map<String, String> options) {
+        UriBuilder builder = FlexHelper.createRequestUri(
+                String.format("/flightstatus/rest/v2/json/flightsNear/%f/%f/%f/%f", topLat, leftLon, bottomLat, rightLon),
+                options, appId, appKey);
+        return FlexHelper.executeHttpGet(builder.build(), FlightTrackResponse.class);
+    }
+
+    public FlightTrackResponse byRadius(double lat, double lon, int miles, Map<String, String> options) {
+        UriBuilder builder = FlexHelper.createRequestUri(
+                String.format("/flightstatus/rest/v2/json/flightsNear/%f/%f/%d", lat, lon, miles),
+                options, appId, appKey);
+        return FlexHelper.executeHttpGet(builder.build(), FlightTrackResponse.class);
+    }
 }

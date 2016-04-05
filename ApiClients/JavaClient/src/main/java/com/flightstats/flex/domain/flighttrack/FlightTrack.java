@@ -28,6 +28,7 @@ public class FlightTrack {
     public Long delayMinutes;
     public Double bearing;
     public Double heading;
+    public String source;
     public List<Position> positions;
     public List<Position> waypoints;
     public List<IrregularOperation> irregularOperations;
