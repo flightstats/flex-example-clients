@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class CurrentFlightStatusClientTest {
 
-    // @Test
+    //@Test
     public void testFlightStatusById() {
         CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
@@ -37,7 +37,7 @@ public class CurrentFlightStatusClientTest {
         System.out.println(response);
     }
 
-    // @Test
+    //@Test
     public void testFlightStatusByArrivingFlight() {
         CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
@@ -49,7 +49,7 @@ public class CurrentFlightStatusClientTest {
         System.out.println(response);
     }
 
-    // @Test
+    //@Test
     public void testFlightStatusByDepartureAirport() {
         CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
@@ -61,7 +61,7 @@ public class CurrentFlightStatusClientTest {
         System.out.println(response);
     }
 
-    // @Test
+    //@Test
     public void testFlightStatusByArrivalAirport() {
         CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
@@ -73,7 +73,7 @@ public class CurrentFlightStatusClientTest {
         System.out.println(response);
     }
 
-    // @Test
+    //@Test
     public void testFlightStatusByRouteDeparture() {
         CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)
@@ -85,7 +85,7 @@ public class CurrentFlightStatusClientTest {
         System.out.println(response);
     }
 
-    // @Test
+    //@Test
     public void testFlightStatusByRouteArrival() {
         CurrentFlightStatusClient client = CurrentFlightStatusClient.builder()
                 .appId(FlexCredentials.appId)

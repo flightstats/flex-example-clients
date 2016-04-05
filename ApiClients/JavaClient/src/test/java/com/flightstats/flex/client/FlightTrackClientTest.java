@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class FlightTrackClientTest {
 
-    // @Test
+    //@Test
     public void testFlightTrackById() {
         FlightTrackClient client = FlightTrackClient.builder()
                 .appId(FlexCredentials.appId)
@@ -23,7 +23,7 @@ public class FlightTrackClientTest {
         System.out.println(response);
     }
 
-    // @Test
+    //@Test
     public void testFlightTrackByDepartingFlight() {
         FlightTrackClient client = FlightTrackClient.builder()
                 .appId(FlexCredentials.appId)
@@ -38,7 +38,7 @@ public class FlightTrackClientTest {
         System.out.println(response);
     }
 
-    // @Test
+    //@Test
     public void testFlightTrackByArrivingFlight() {
         FlightTrackClient client = FlightTrackClient.builder()
                 .appId(FlexCredentials.appId)
@@ -64,7 +64,7 @@ public class FlightTrackClientTest {
         System.out.println(response);
     }
 
-    // @Test
+    //@Test
     public void testFlightTrackByArrivalAirport() {
         FlightTrackClient client = FlightTrackClient.builder()
                 .appId(FlexCredentials.appId)
@@ -77,7 +77,7 @@ public class FlightTrackClientTest {
         System.out.println(response);
     }
 
-    // @Test
+    //@Test
     public void testFlightPositionsByBoundingBox() {
         FlightTrackClient client = FlightTrackClient.builder()
                 .appId(FlexCredentials.appId)
@@ -89,7 +89,7 @@ public class FlightTrackClientTest {
         System.out.println(response);
     }
 
-    // @Test
+    //@Test
     public void testFlightPositionsByRadius() {
         FlightTrackClient client = FlightTrackClient.builder()
                 .appId(FlexCredentials.appId)
