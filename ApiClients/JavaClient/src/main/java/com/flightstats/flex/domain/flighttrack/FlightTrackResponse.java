@@ -9,17 +9,17 @@ import lombok.Value;
 
 import java.util.List;
 
-/**
- * The superset of all possible response fields for all FlightStatus by Flight queries.
- */
 @Value
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor(force = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FlightTrackResponse {
+    // Some responses return a single value and some an array, need to support mappings for both.
     public FlightTrack flightTrack;
     public List<FlightTrack> flightTracks;
+
+    // For FlightsNear responses
     public List<FlightTrack> flightPositions;
     public Appendix appendix;
 }

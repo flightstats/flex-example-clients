@@ -1,7 +1,8 @@
-package com.flightstats.flex.domain.flightstatus;
+package com.flightstats.flex.domain.reference;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.flightstats.flex.domain.Appendix;
+import com.flightstats.flex.domain.Airline;
+import com.flightstats.flex.domain.Airport;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -14,10 +15,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor(force = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class FlightStatusResponse {
+public class AirportsLookupResponse {
     // Some responses return a single value and some an array, need to support mappings for both.
-    public FlightStatus flightStatus;
-    public List<FlightStatus> flightStatuses;
-
-    public Appendix appendix;
+    public Airport airport;
+    public List<Airport> airports;
 }

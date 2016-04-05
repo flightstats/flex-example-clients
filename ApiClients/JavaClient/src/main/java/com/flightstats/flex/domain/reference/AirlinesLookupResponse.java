@@ -11,15 +11,13 @@ import lombok.Value;
 
 import java.util.List;
 
-/**
- * The superset of all possible response fields for all FlightStatus by Flight queries.
- */
 @Value
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor(force = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AirlinesLookupResponse {
+    // Some responses return a single value and some an array, need to support mappings for both.
     public Airline airline;
     public List<Airline> airlines;
 }
