@@ -64,7 +64,7 @@ public class FlightTrackClientTest {
         System.out.println(response);
     }
 
-    //@Test
+    // @Test
     public void testFlightTrackByArrivalAirport() {
         FlightTrackClient client = FlightTrackClient.builder()
                 .appId(FlexCredentials.appId)
