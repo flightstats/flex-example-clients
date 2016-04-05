@@ -1,13 +1,15 @@
 package com.flightstats.flex.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.Value;
 
 @Value
+@Builder
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
-public class RequestParameter<T> {
-    public String requested;
-    public T interpreted;
+public class FlightStatusReference {
+    public String fsCode;
+    public Long flightId;
 }

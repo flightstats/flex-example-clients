@@ -1,4 +1,4 @@
-package com.flightstats.flex.domain.flightstatus;
+package com.flightstats.flex.domain;
 
 import com.flightstats.flex.domain.DateUtcAndLocal;
 import com.flightstats.flex.domain.UpdatedDateField;

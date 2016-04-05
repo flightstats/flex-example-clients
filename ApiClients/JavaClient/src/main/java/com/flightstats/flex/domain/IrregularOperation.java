@@ -1,4 +1,4 @@
-package com.flightstats.flex.domain.flightstatus;
+package com.flightstats.flex.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.flightstats.flex.domain.JacksonZonedDateTimeDeserializer;

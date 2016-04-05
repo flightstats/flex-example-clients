@@ -1,4 +1,4 @@
-package com.flightstats.flex.domain.flightstatus;
+package com.flightstats.flex.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

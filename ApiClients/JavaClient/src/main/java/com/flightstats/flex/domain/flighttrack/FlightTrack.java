@@ -1,6 +1,8 @@
 package com.flightstats.flex.domain.flighttrack;
 
 import com.flightstats.flex.domain.DateUtcAndLocal;
+import com.flightstats.flex.domain.IrregularOperation;
+import com.flightstats.flex.domain.Position;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
