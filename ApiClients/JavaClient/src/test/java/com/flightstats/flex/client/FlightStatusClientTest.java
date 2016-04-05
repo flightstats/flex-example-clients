@@ -6,6 +6,7 @@ import com.flightstats.flex.domain.flightstatus.FlightStatusResponse;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,8 +34,7 @@ public class FlightStatusClientTest {
                 .appKey(FlexCredentials.appKey)
                 .build();
 
-        FlightStatusResponse response = client.byDepartingFlight(
-                "AA", "100", LocalDate.now(), new HashMap<>());
+        FlightStatusResponse response = client.byDepartingFlight("AA", "100", LocalDate.now(), new HashMap<>());
 
         System.out.println(response);
     }
@@ -46,8 +46,7 @@ public class FlightStatusClientTest {
                 .appKey(FlexCredentials.appKey)
                 .build();
 
-        FlightStatusResponse response = client.byArrivingFlight(
-                "AA", "100", LocalDate.now(), new HashMap<>());
+        FlightStatusResponse response = client.byArrivingFlight("AA", "100", LocalDate.now(), new HashMap<>());
 
         System.out.println(response);
     }
@@ -59,8 +58,7 @@ public class FlightStatusClientTest {
                 .appKey(FlexCredentials.appKey)
                 .build();
 
-        FlightStatusResponse response = client.byDepartureAirport(
-                "PDX", ZonedDateTime.now(), new HashMap<>());
+        FlightStatusResponse response = client.byDepartureAirport("PDX", LocalDateTime.now(), new HashMap<>());
 
         System.out.println(response);
     }
@@ -72,8 +70,31 @@ public class FlightStatusClientTest {
                 .appKey(FlexCredentials.appKey)
                 .build();
 
-        FlightStatusResponse response = client.byArrivalAirport(
-                "PDX", ZonedDateTime.now(), new HashMap<>());
+        FlightStatusResponse response = client.byArrivalAirport("PDX", LocalDateTime.now(), new HashMap<>());
+
+        System.out.println(response);
+    }
+
+    // @Test
+    public void testFlightStatusByRouteDeparture() {
+        FlightStatusClient client = FlightStatusClient.builder()
+                .appId(FlexCredentials.appId)
+                .appKey(FlexCredentials.appKey)
+                .build();
+
+        FlightStatusResponse response = client.byRouteDeparture("PDX", "SFO", LocalDate.now(), new HashMap<>());
+
+        System.out.println(response);
+    }
+
+    // @Test
+    public void testFlightStatusByRouteArrival() {
+        FlightStatusClient client = FlightStatusClient.builder()
+                .appId(FlexCredentials.appId)
+                .appKey(FlexCredentials.appKey)
+                .build();
+
+        FlightStatusResponse response = client.byRouteArrival("PDX", "SFO", LocalDate.now(), new HashMap<>());
 
         System.out.println(response);
     }

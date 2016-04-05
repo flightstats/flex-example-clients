@@ -7,7 +7,7 @@ import lombok.Value;
 
 import javax.ws.rs.core.UriBuilder;
 import java.time.LocalDate;
-import java.time.ZonedDateTime;
+import java.time.LocalDateTime;
 import java.util.Map;
 
 @Value
@@ -40,7 +40,7 @@ public class FlightStatusClient {
     }
 
     // By Airport
-    public FlightStatusResponse byDepartureAirport(String airport, ZonedDateTime date, Map<String, String> options) {
+    public FlightStatusResponse byDepartureAirport(String airport, LocalDateTime date, Map<String, String> options) {
         UriBuilder builder = FlexHelper.createRequestUri(
                 String.format("/flightstatus/rest/v2/json/airport/status/%s/dep/%s/%s/%s/%s",
                         airport, date.getYear(), date.getMonthValue(), date.getDayOfMonth(), date.getHour()),
@@ -48,10 +48,27 @@ public class FlightStatusClient {
         return FlexHelper.executeHttpGet(builder.build(), FlightStatusResponse.class);
     }
 
-    public FlightStatusResponse byArrivalAirport(String airport, ZonedDateTime date, Map<String, String> options) {
+    public FlightStatusResponse byArrivalAirport(String airport, LocalDateTime date, Map<String, String> options) {
         UriBuilder builder = FlexHelper.createRequestUri(
                 String.format("/flightstatus/rest/v2/json/airport/status/%s/arr/%s/%s/%s/%s",
                         airport, date.getYear(), date.getMonthValue(), date.getDayOfMonth(), date.getHour()),
+                options, appId, appKey);
+        return FlexHelper.executeHttpGet(builder.build(), FlightStatusResponse.class);
+    }
+
+    // By Route
+    public FlightStatusResponse byRouteDeparture(String departureAirport, String arrivalAirport, LocalDate date, Map<String, String> options) {
+        UriBuilder builder = FlexHelper.createRequestUri(
+                String.format("/flightstatus/rest/v2/json/route/status/%s/%s/dep/%s/%s/%s",
+                        departureAirport, arrivalAirport, date.getYear(), date.getMonthValue(), date.getDayOfMonth()),
+                options, appId, appKey);
+        return FlexHelper.executeHttpGet(builder.build(), FlightStatusResponse.class);
+    }
+
+    public FlightStatusResponse byRouteArrival(String departureAirport, String arrivalAirport, LocalDate date, Map<String, String> options) {
+        UriBuilder builder = FlexHelper.createRequestUri(
+                String.format("/flightstatus/rest/v2/json/route/status/%s/%s/arr/%s/%s/%s",
+                        departureAirport, arrivalAirport, date.getYear(), date.getMonthValue(), date.getDayOfMonth()),
                 options, appId, appKey);
         return FlexHelper.executeHttpGet(builder.build(), FlightStatusResponse.class);
     }
