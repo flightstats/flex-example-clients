@@ -1,4 +1,4 @@
-package com.flightstats.flex.domain.delayindex;
+package com.flightstats.flex.domain.airportdelayindex;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.flightstats.flex.domain.DelayIndex;
@@ -14,6 +14,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor(force = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class DelayIndexResponse {
+public class AirportDelayIndexResponse {
     List<DelayIndex> delayIndexes;
 }
