@@ -1,0 +1,40 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group = 'com.flightstats.flex.client'
+
+repositories {
+    mavenCentral();
+}
+
+dependencies {
+    compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.7.3'
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.8'
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '2+'
+
+    testCompile('junit:junit:4.11') { transitive = false }
+    testCompile('org.mockito:mockito-all:1.9.5') { transitive = false }
+}
+
+sourceSets {
+    main {
+        java { srcDir 'src/main/java' }
+        resources {
+            srcDir 'src/main/java'
+            srcDir 'src/main/resources'
+        }
+    }
+    test {
+        java { srcDir 'src/test/java' }
+        resources { srcDir 'src/test/java' }
+    }
+}
+
+test {
+    testLogging {
+        exceptionFormat = 'full'
+        events = ['passed']
+    }
+}
