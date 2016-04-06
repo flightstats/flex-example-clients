@@ -6,3 +6,4 @@ At this time, we don't actively seek for bugs in this code or announce and publi
 
 * [Java Client for the Flight Status Feed](flight-status-feed/java)
 * [Concurrent Java Client for the Flights Near API](flights-near/)
+* [Java API Client](ApiClients/JavaClient)
