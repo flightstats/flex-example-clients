@@ -2,6 +2,7 @@ package com.flightstats.flex.client;
 
 import com.flightstats.flex.domain.reference.AirlinesLookupResponse;
 import com.flightstats.flex.domain.reference.AirportsLookupResponse;
+import com.flightstats.flex.domain.reference.EquipmentLookupResponse;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
@@ -157,4 +158,18 @@ public class ReferenceLookupClient {
                 options, appId, appKey);
         return FlexHelper.executeHttpGet(builder.build(), AirportsLookupResponse.class);
     }
+
+    // Equipment
+    public EquipmentLookupResponse equipmentAll(Map<String, String> options) {
+        UriBuilder builder = FlexHelper.createRequestUri("/equipment/rest/v1/json/all", options, appId, appKey);
+        return FlexHelper.executeHttpGet(builder.build(), EquipmentLookupResponse.class);
+    }
+
+    public EquipmentLookupResponse equipmentByIataCode(String code, Map<String, String> options) {
+        UriBuilder builder = FlexHelper.createRequestUri(
+                String.format("/equipment/rest/v1/json/iata/%s", code),
+                options, appId, appKey);
+        return FlexHelper.executeHttpGet(builder.build(), EquipmentLookupResponse.class);
+    }
+
 }

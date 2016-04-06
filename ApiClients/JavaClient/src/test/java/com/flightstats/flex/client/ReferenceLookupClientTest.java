@@ -4,6 +4,7 @@ package com.flightstats.flex.client;
 import com.flightstats.flex.FlexCredentials;
 import com.flightstats.flex.domain.reference.AirlinesLookupResponse;
 import com.flightstats.flex.domain.reference.AirportsLookupResponse;
+import com.flightstats.flex.domain.reference.EquipmentLookupResponse;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -263,6 +264,31 @@ public class ReferenceLookupClientTest {
 
         Map<String,String> params = new HashMap<>();
         AirportsLookupResponse response = client.airportsWithinRadius(17, 39, 150, params);
+        System.out.println(response);
+    }
+
+    // Equipment
+    //@Test
+    public void testEquipmentAll() {
+        ReferenceLookupClient client = ReferenceLookupClient.builder()
+                .appId(FlexCredentials.appId)
+                .appKey(FlexCredentials.appKey)
+                .build();
+
+        Map<String,String> params = new HashMap<>();
+        EquipmentLookupResponse response = client.equipmentAll(params);
+        System.out.println(response);
+    }
+
+    //@Test
+    public void testEquipmentByIataCode() {
+        ReferenceLookupClient client = ReferenceLookupClient.builder()
+                .appId(FlexCredentials.appId)
+                .appKey(FlexCredentials.appKey)
+                .build();
+
+        Map<String,String> params = new HashMap<>();
+        EquipmentLookupResponse response = client.equipmentByIataCode("72W", params);
         System.out.println(response);
     }
 }
