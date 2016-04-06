@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class AirportDelayIndexClientTest {
 
-    @Test
+    //@Test
     public void byAirport() {
         AirportDelayIndexClient client = AirportDelayIndexClient.builder()
                 .appId(FlexCredentials.appId)
@@ -22,7 +22,7 @@ public class AirportDelayIndexClientTest {
         System.out.println(response);
     }
 
-    @Test
+    //@Test
     public void byCountryCode() {
         AirportDelayIndexClient client = AirportDelayIndexClient.builder()
                 .appId(FlexCredentials.appId)
@@ -34,7 +34,7 @@ public class AirportDelayIndexClientTest {
         System.out.println(response);
     }
 
-    @Test
+    //@Test
     public void byRegion() {
         AirportDelayIndexClient client = AirportDelayIndexClient.builder()
                 .appId(FlexCredentials.appId)
@@ -46,7 +46,7 @@ public class AirportDelayIndexClientTest {
         System.out.println(response);
     }
 
-    @Test
+    //@Test
     public void byState() {
         AirportDelayIndexClient client = AirportDelayIndexClient.builder()
                 .appId(FlexCredentials.appId)
