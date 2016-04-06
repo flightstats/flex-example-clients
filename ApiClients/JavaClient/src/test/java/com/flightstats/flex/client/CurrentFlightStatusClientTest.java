@@ -3,6 +3,7 @@ package com.flightstats.flex.client;
 
 import com.flightstats.flex.FlexCredentials;
 import com.flightstats.flex.domain.flightstatus.FlightStatusResponse;
+import org.junit.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

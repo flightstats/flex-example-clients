@@ -35,5 +35,6 @@ sourceSets {
 test {
     testLogging {
         exceptionFormat = 'full'
+        events = ['passed']
     }
 }
