@@ -14,14 +14,14 @@ import java.util.Map;
 @Builder
 @AllArgsConstructor
 public class FlightTrackClient {
-    public static String AIRPORT = "airport";
-    public static String CODE_TYPE = "codeType";
-    public static String UTC = "utc";
-    public static String MAX_POSITIONS = "maxPositions";
-    public static String MAX_POSITION_AGE_MINUTES = "maxPositionAgeMinutes";
-    public static String HOUR_OF_DAY = "hourOfDay";
-    public static String NUM_HOURS = "numHours";
-    public static String INCLUDE_FLIGHT_PLAN = "includeFlightPlan";
+    public static final String AIRPORT = "airport";
+    public static final String CODE_TYPE = "codeType";
+    public static final String UTC = "utc";
+    public static final String MAX_POSITIONS = "maxPositions";
+    public static final String MAX_POSITION_AGE_MINUTES = "maxPositionAgeMinutes";
+    public static final String HOUR_OF_DAY = "hourOfDay";
+    public static final String NUM_HOURS = "numHours";
+    public static final String INCLUDE_FLIGHT_PLAN = "includeFlightPlan";
 
     private String appKey;
     private String appId;

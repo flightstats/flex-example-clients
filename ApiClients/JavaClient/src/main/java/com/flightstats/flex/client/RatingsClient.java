@@ -12,8 +12,8 @@ import java.util.Map;
 @Builder
 @AllArgsConstructor
 public class RatingsClient {
-    public static String CODE_TYPE = "codeType";
-    public static String DEPARTURE_AIRPORT = "departureAirport";
+    public static final String CODE_TYPE = "codeType";
+    public static final String DEPARTURE_AIRPORT = "departureAirport";
 
     private String appKey;
     private String appId;

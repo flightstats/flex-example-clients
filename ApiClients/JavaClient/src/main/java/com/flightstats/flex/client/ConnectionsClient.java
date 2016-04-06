@@ -6,7 +6,6 @@ import lombok.Builder;
 import lombok.Value;
 
 import javax.ws.rs.core.UriBuilder;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Map;
 
@@ -14,18 +13,18 @@ import java.util.Map;
 @Builder
 @AllArgsConstructor
 public class ConnectionsClient {
-    public static String INCLUDE_AIRPORTS = "includeAirports";
-    public static String EXCLUDE_AIRPORTS = "excludeAirports";
-    public static String INCLUDE_AIRLINES = "includeAirlines";
-    public static String EXCLUDE_AIRLINES = "excludeAirlines";
-    public static String NUM_HOURS = "numHours";
-    public static String MAX_CONNECTIONS = "maxConnections";
-    public static String INCLUDE_SURFACE = "includeSurface";
-    public static String PAYLOAD_TYPE = "payloadType";
-    public static String INCLUDE_CODESHARES = "includeCodeshares";
-    public static String INCLUDE_MULTIPLE_CARRIERS = "includeMultipleCarriers";
-    public static String MINIMUM_CONNECT_TIME = "minimumConnectTime";
-    public static String MAX_RESULTS = "maxResults";
+    public static final String INCLUDE_AIRPORTS = "includeAirports";
+    public static final String EXCLUDE_AIRPORTS = "excludeAirports";
+    public static final String INCLUDE_AIRLINES = "includeAirlines";
+    public static final String EXCLUDE_AIRLINES = "excludeAirlines";
+    public static final String NUM_HOURS = "numHours";
+    public static final String MAX_CONNECTIONS = "maxConnections";
+    public static final String INCLUDE_SURFACE = "includeSurface";
+    public static final String PAYLOAD_TYPE = "payloadType";
+    public static final String INCLUDE_CODESHARES = "includeCodeshares";
+    public static final String INCLUDE_MULTIPLE_CARRIERS = "includeMultipleCarriers";
+    public static final String MINIMUM_CONNECT_TIME = "minimumConnectTime";
+    public static final String MAX_RESULTS = "maxResults";
     public enum PayloadType { passenger, cargo, both }
 
     private String appKey;

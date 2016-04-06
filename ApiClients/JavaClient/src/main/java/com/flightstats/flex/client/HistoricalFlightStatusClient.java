@@ -14,12 +14,12 @@ import java.util.Map;
 @Builder
 @AllArgsConstructor
 public class HistoricalFlightStatusClient {
-    public static String AIRPORT = "airport";
-    public static String CODE_TYPE = "codeType";
-    public static String UTC = "utc";
-    public static String NUM_HOURS = "numHours";
-    public static String CARRIER = "carrier";
-    public static String MAX_FLIGHTS = "maxFlights";
+    public static final String AIRPORT = "airport";
+    public static final String CODE_TYPE = "codeType";
+    public static final String UTC = "utc";
+    public static final String NUM_HOURS = "numHours";
+    public static final String CARRIER = "carrier";
+    public static final String MAX_FLIGHTS = "maxFlights";
 
     private String appKey;
     private String appId;
