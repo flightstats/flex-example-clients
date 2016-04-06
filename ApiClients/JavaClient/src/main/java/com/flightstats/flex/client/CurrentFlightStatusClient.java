@@ -14,6 +14,10 @@ import java.util.Map;
 @Builder
 @AllArgsConstructor
 public class CurrentFlightStatusClient {
+    public static String AIRPORT = "airport";
+    public static String CODE_TYPE = "codeType";
+    public static String UTC = "utc";
+
     private String appKey;
     private String appId;
 

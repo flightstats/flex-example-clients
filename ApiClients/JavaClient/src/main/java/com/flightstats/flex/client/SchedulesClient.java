@@ -14,6 +14,8 @@ import java.util.Map;
 @Builder
 @AllArgsConstructor
 public class SchedulesClient {
+    public static String CODE_TYPE = "codeType";
+
     private String appKey;
     private String appId;
 
