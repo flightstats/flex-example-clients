@@ -1,6 +1,6 @@
 ### Requirements
-1) Java 8 (Java 8 specific functionality is used, prior versions will not work)
-2) Gradle 2.12 (prior versions may works, but are untested)
+1. Java 8 (Java 8 specific functionality is used, prior versions will not work)
+1. Gradle 2.12 (prior versions may works, but are untested)
 
 ### Getting Started
 * Create JavaClient/src/test/java/com/flightstats/flex/flex.properties, add your appId and appKey. For example:
@@ -13,16 +13,15 @@ appKey=this_is_my_app_key
 This will run a basic test query with your credentials. If that works, you're ready to start exploring the other tests.
 
 ### Explore 
-There are test clients for every API available. However, the tests are disabled by default since which tests will work 
-depends on which APIs your credentials are allowed to access. To run a specific test, comment in the relevant @Test line. 
-For example, in CurrentFlightStatusClientTest, you can test querying an arriving flight by commenting in the @Test line:
+There are test clients for nearly every API available. However, the tests are disabled by default since which tests will work depends on which APIs your credentials are allowed to access. To run a specific test, comment in the relevant @Test line. For example, in CurrentFlightStatusClientTest, you can test querying an arriving flight by commenting in the @Test line:
 
     // @Test
     public void testFlightStatusByArrival() {
         ...
     }
 
-To run that specific test file, at the command line execute (the test name is the file name minus the "Test" suffix):
+To run that specific test file, at the command line execute the test like so (the name is the test file name minus the "Test" suffix):
+
 ```gradle -Dtest.single=CurrentFlightStatusClient test```
 
 
