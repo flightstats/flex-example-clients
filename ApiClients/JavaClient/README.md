@@ -1,6 +1,6 @@
 ### Requirements
 1. Java 8 (Java 8 specific functionality is used, prior versions will not work)
-1. Gradle 2.12 (prior versions may works, but are untested)
+1. Gradle 2.12 (prior versions may work, but are untested)
 
 ### Getting Started
 * Create JavaClient/src/test/java/com/flightstats/flex/flex.properties, add your appId and appKey. For example:
